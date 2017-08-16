@@ -10,6 +10,7 @@ export class ServersComponent implements OnChanges, OnInit, OnDestroy {
     serverName1 = '';
     serverName2 = 'Testserver';
     serverCreated = false;
+    servers = ['Testserver1', 'Testserver2'];
 
     constructor() {
         setInterval( () => {
@@ -25,6 +26,7 @@ export class ServersComponent implements OnChanges, OnInit, OnDestroy {
 
     onCreateServer() {
         this.serverCreationStatus = 'Server was created! Name is '+this.serverName2;
+        this.servers.push(this.serverName2);
         this.serverCreated = true;
         console.log('onCreateServer')
     }
