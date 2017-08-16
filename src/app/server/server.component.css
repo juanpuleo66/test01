@@ -1,0 +1,10 @@
+h2 {
+    background: rgba(150, 200, 250, 0.8);
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.online {
+    padding: 20px;
+}

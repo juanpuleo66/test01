@@ -1,0 +1,25 @@
+<h2>servers.component</h2>
+<label>Server Name</label>
+<input 
+    type="text"
+    class="form-control"
+    placeholder="name of the server 1"
+    (input)="onUpdateServerName($event)"
+>
+<p>{{serverName1}}</p>
+<br>
+<input 
+    type="text"
+    class="form-control"
+    placeholder="name of the server 2"
+    [(ngModel)]="serverName2"
+>
+<p>{{serverName2}}</p>
+<br>
+<button 
+    class="btn btn-primary"
+    [disabled]="allowNewServer"
+    (click)="onCreateServer()"
+>Add Server - {{allowNewServer}}
+</button>
+<p *ngIf="serverCreated">{{serverCreationStatus}}</p>

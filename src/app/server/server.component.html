@@ -1,0 +1,9 @@
+<h2>server.component</h2>
+<p 
+    [ngStyle]="{background: getBackGroundColor(), color: getColor()}"
+    [ngClass]="{'online':true}"
+><b>Server ID:</b> {{serverId}}</p>
+<p 
+    [ngStyle]="{background: getBackGroundColor(), color: getColor()}"
+    [ngClass]="{online: serverStatus == 'online' }"
+><b>Server Status:</b> {{ getserverStatus()}}</p>
